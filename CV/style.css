@@ -1,0 +1,555 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --dark: #0f172a;
+    --text: #475569;
+    --light: #f1f5f9;
+    --white: #ffffff;
+    --green: #16a34a;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #eaf0f8;
+    color: var(--dark);
+    line-height: 1.8;
+    direction: rtl;
+}
+
+
+/* Main Container */
+
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(15, 23, 42, 0.10);
+}
+
+
+/* Hero Section */
+
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    color: white;
+    padding: 65px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    color: #8eb9d8;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #dbeafe;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+
+/* Hero Decoration */
+
+.hero-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 170px;
+    height: 170px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 85px;
+    font-weight: 800;
+    color: #bfdbfe;
+    box-shadow: 0 0 40px rgba(255,255,255,0.1);
+}
+
+
+/* WhatsApp Button */
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #15803d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(22,163,74,0.25);
+}
+
+
+/* Sections */
+
+.section {
+    padding: 35px 50px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section h3 {
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    position: relative;
+    padding-right: 15px;
+}
+
+.section h3::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 5px;
+    height: 25px;
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+
+/* Skills */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    background: var(--light);
+    padding: 20px 12px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background: #dbeafe;
+}
+
+.skill span {
+    font-size: 30px;
+}
+
+.skill h4 {
+    margin: 8px 0 5px;
+    font-size: 16px;
+}
+
+.skill p {
+    color: var(--text);
+    font-size: 12px;
+}
+
+
+/* Projects */
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    border-right: 3px solid var(--primary);
+}
+
+.icon {
+    font-size: 28px;
+}
+
+.project-item h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.project-item p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+
+/* Education */
+
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border-right: 3px solid var(--primary);
+}
+
+.education-icon {
+    font-size: 35px;
+}
+
+.education-card h4 {
+    font-size: 17px;
+}
+
+.education-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+
+/* Contact */
+
+.contact-section {
+    text-align: center;
+    background: #f8fafc;
+}
+
+.contact-section h3 {
+    display: inline-block;
+}
+
+.contact-section > p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.contact-info a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--primary);
+}
+
+.big-btn {
+    padding: 15px 35px;
+    font-size: 17px;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: var(--dark);
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+
+    .container {
+        margin: 15px;
+        border-radius: 15px;
+    }
+
+    .hero {
+        padding: 40px 25px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+        font-size: 60px;
+    }
+
+    .section {
+        padding: 30px 22px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section h3 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+}
+/* Dark Mode Button */
+
+/* Circular Theme Button */
+
+.theme-toggle {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    padding: 0 !important;
+
+    border: none;
+    border-radius: 50% !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1e293b;
+    color: white;
+
+    font-size: 23px;
+    cursor: pointer;
+
+    margin: 15px 20px 0 auto;
+
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.12) rotate(15deg);
+}
+
+body.dark-mode .theme-toggle {
+    background: #facc15;
+    color: #1e293b;
+}
+/* Dark Mode */
+
+body.dark-mode {
+    background: #020617;
+    color: #f1f5f9;
+}
+
+body.dark-mode .container {
+    background: #0f172a;
+}
+
+body.dark-mode .section {
+    border-color: #334155;
+}
+
+body.dark-mode .skill,
+body.dark-mode .project-item,
+body.dark-mode .education-card,
+body.dark-mode .contact-section {
+    background: #1e293b;
+}
+
+body.dark-mode .skill p,
+body.dark-mode .project-item p,
+body.dark-mode .education-card p,
+body.dark-mode .contact-section > p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .project-item h4,
+body.dark-mode .education-card h4,
+body.dark-mode .skill h4 {
+    color: #f8fafc;
+}
+
+body.dark-mode .contact-info a {
+    color: #e2e8f0;
+}
+
+body.dark-mode .theme-toggle {
+    background: #facc15;
+    color: #0f172a;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: #eab308;
+}
+/* PDF Button */
+
+.pdf-button {
+    display: block;
+    margin: 12px 20px 0 auto;
+    padding: 10px 20px;
+
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pdf-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Print Settings */
+
+@media print {
+
+    body {
+        background: white !important;
+    }
+
+    .theme-toggle,
+    .pdf-button {
+        display: none !important;
+    }
+
+    .container {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .section {
+        break-inside: avoid;
+    }
+
+    footer {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+}
+/* Buttons Container */
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 15px 20px;
+}
+
+/* Night Mode Button */
+
+.theme-toggle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: #0f172a;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* PDF Button */
+
+.pdf-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+}
+
+.pdf-button:hover {
+    background: #1d4ed8;
+}
+
+/* Hide buttons when printing */
+
+@media print {
+    .buttons-container {
+        display: none !important;
+    }
+}
